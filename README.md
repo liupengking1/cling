@@ -3,6 +3,19 @@ Read the README.txt
 
 https://github.com/4thline/cling/blob/master/distribution/src/dist/README.txt
 
+Mods
+---------------------
+* Modification of UpnpServiceImpl to avoid shutdownRouter exception
+
+* Addition of a ApplicationURLHeader as clone of LocationHeader
+
+* Modification of RemoteDevice to store the Application URL information
+
+* Modification of RetrieveRemoteDescriptors to get the info from the header and put it in the RemoteDevice
+
+* Modification of UpnpHeader to take ApplicationURLHeader into account in the parsing
+
+
 Building Cling
 ---------------------
 
