@@ -96,6 +96,7 @@
         <paxexam.version>1.2.4</paxexam.version>
         <felix.version>1.4.0</felix.version>
         <kxml.version>2.3.0</kxml.version>
+	<android.sdk.path>/Users/pengliu/Documents/adt-bundle-mac-x86_64-20130729/sdk</android.sdk.path>
 
     </properties>
 
