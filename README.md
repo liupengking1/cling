@@ -19,11 +19,9 @@ Mods
 Building Cling
 ---------------------
 
-* Install Maven 3.1.1 or newer.
+* Install Maven 3.2.3 or newer.
 
 * Install the Android SDK and set the ANDROID_HOME environment variable to the SDK install directory.
-
-* Copy the Android SDK's Maven extras `$ANDROID_HOME/extras/android/m2repository` to your local Maven repository `~/.m2`.
 
 * Clone the Cling source:
 
@@ -39,6 +37,8 @@ git clone https://github.com/4thline/cling.git
 mvn clean install
 ````
 
+If your build fails with Android/dex packaging errors, you forgot the clean.
+
 * Use Cling in your pom.xml with:
 
 ````
@@ -46,7 +46,7 @@ mvn clean install
   <dependency>
     <groupId>org.fourthline.cling</groupId>
     <artifactId>cling-core</artifactId>
-    <version>2.0-SNAPSHOT</version>
+    <version>2.0.1</version>
   </dependency>
 </dependencies>
 ````
