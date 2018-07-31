@@ -134,7 +134,7 @@ public class MockRouter implements Router {
             : getStreamResponseMessage(msg);
     }
 
-    public void broadcast(byte[] bytes) {
+    public void broadcast(byte[] bytes, int port) {
         broadcastedBytes.add(bytes);
     }
 

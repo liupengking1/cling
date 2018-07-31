@@ -355,7 +355,7 @@ public class RouterImpl implements Router {
      *
      * @param bytes The byte payload of the UDP datagram.
      */
-    public void broadcast(byte[] bytes) throws RouterException {
+    public void broadcast(byte[] bytes, int port) throws RouterException {
         lock(readLock);
         try {
             if (enabled) {
@@ -363,7 +363,7 @@ public class RouterImpl implements Router {
                     InetAddress broadcast = networkAddressFactory.getBroadcastAddress(entry.getKey());
                     if (broadcast != null) {
                         log.fine("Sending UDP datagram to broadcast address: " + broadcast.getHostAddress());
-                        DatagramPacket packet = new DatagramPacket(bytes, bytes.length, broadcast, 9);
+                        DatagramPacket packet = new DatagramPacket(bytes, bytes.length, broadcast, port);
                         entry.getValue().send(packet);
                     }
                 }

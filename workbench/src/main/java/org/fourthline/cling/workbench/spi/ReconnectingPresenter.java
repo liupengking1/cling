@@ -75,7 +75,7 @@ public abstract class ReconnectingPresenter implements ReconnectView.Presenter {
     @Override
     public void onWakeupClicked() {
         try {
-            upnpService.getRouter().broadcast(wakeOnLANBytes);
+            upnpService.getRouter().broadcast(wakeOnLANBytes, 9);
         } catch (RouterException ex) {
             Workbench.Log.MAIN.warning(
                 "Broadcasting wakeup bytes on LAN failed: " + ex

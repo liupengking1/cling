@@ -156,6 +156,6 @@ public interface Router {
      * @param bytes The byte payload of the UDP datagram.
      * @throws RouterException if a recoverable error, such as thread interruption, occurs.
      */
-    public void broadcast(byte[] bytes) throws RouterException;
+    public void broadcast(byte[] bytes, int port) throws RouterException;
 
 }
